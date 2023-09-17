@@ -45,7 +45,7 @@ def main():
 
     i=st.button("Predict", type="primary")
     if i:
-        model= pickle.load(open("rf_model", 'rb'))
+        model= pickle.load(open("gb_model", 'rb'))
         y_value=model.predict(np.array(df_temp.iloc[0].values).reshape(1,6))
         st.write(f"Your medical cost for the entered information is approximately {round(y_value[0],2)} dollars.")
 
